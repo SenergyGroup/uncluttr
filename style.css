@@ -122,6 +122,34 @@ header {
     margin-top: 15px;
 }
 
+.mockup-showcase {
+    text-align: center;
+    padding: 60px 0;
+    border-top: 1px solid #e0e0e0; /* Adds a nice separator */
+}
+
+.mockup-showcase h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.mockup-showcase .showcase-description {
+    font-size: 1.1em;
+    line-height: 1.7;
+    max-width: 550px; /* Constrains line width for better readability */
+    /* Centers the text block and adds 40px of space below it, before the GIF */
+    margin: 0 auto 40px auto; 
+}
+
+.mockup-showcase img {
+    max-width: 350px; /* Controls the max size on larger screens */
+    width: 100%;      /* Makes it responsive on smaller screens */
+    height: auto;
+    border-radius: 25px; /* A modern, soft rounded corner for the mockup */
+    /* A subtle shadow that uses the brand's dark blue for color harmony */
+    box-shadow: 0 8px 25px rgba(29, 45, 62, 0.15); 
+}
+
 /* -- 5. Features Section (No changes here) -- */
 .features {
     text-align: center;
@@ -159,11 +187,32 @@ header {
     }
 }
 
-/* -- 6. Footer (No changes here) -- */
+/* -- 6. Footer  -- */
 footer {
     text-align: center;
     padding: 40px 20px;
     margin-top: 40px;
     color: #999;
     font-size: 0.9em;
+}
+
+@media (max-width: 600px) {
+
+    /* Change the form layout from horizontal to vertical */
+    .email-form {
+        flex-direction: column; /* Stacks the input and button on top of each other */
+        align-items: stretch;   /* Ensures the items stretch to fill the full width */
+    }
+
+    /* Make the input and button take up the full width of the container */
+    .email-form input[type="email"],
+    .email-form button {
+        width: 100%; /* Removes the fixed width and makes them responsive */
+        box-sizing: border-box; /* Ensures padding doesn't break the layout */
+    }
+
+    /* Optional: Adjust heading size on very small screens for better balance */
+    .hero h2 {
+        font-size: 2.4em;
+    }
 }
